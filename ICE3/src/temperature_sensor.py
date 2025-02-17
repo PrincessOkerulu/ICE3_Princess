@@ -36,6 +36,8 @@ def process_temperatures(temp_list):
         return "Error: No valid input provided."
     if out_of_bound_found:
         return "Error: Out-of-bound values detected."
+    if not valid_temps:
+        return "Error: No valid input provided."  # covers case if everything was invalid or out-of-bound
 
     # 4) All inputs are valid and within range -> calculate min, max, avg
     min_temp = min(valid_temps)
